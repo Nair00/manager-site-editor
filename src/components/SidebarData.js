@@ -1,43 +1,47 @@
 import React from 'react';
+import $ from 'jquery';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import Home from '../pages/Home';
+
 
 export const SidebarData = [
   {
-    title: 'Home',
+    title: 'Add Button',
     path: '/',
     icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    command: () => {
+      console.log("title");
+    }
   },
   {
-    title: 'Reports',
+    title: 'Add Title',
     path: '/reports',
     icon: <IoIcons.IoIosPaper />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    command: () => {
+      console.log("button");
+    }
   },
   {
-    title: 'Products',
-    path: '/products',
-    icon: <FaIcons.FaCartPlus />,
-    cName: 'nav-text'
+    title: 'Turn Red',
+    path: '/reports',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text',
+    command: () => {
+      console.log("Red");
+      $("h1").css({color: "red"});
+    }
   },
   {
-    title: 'Team',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Messages',
-    path: '/messages',
-    icon: <FaIcons.FaEnvelopeOpenText />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Support',
-    path: '/support',
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: 'nav-text'
+    title: 'Turn Black',
+    path: '/reports',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text',
+    command: () => {
+      $("h1").css({color: "black"});
+    }
   }
 ];

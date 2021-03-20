@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import { IoMdUmbrella } from 'react-icons/io';
 
 function Navbar() {
+
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -20,8 +22,8 @@ function Navbar() {
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
-            <li className='navbar-toggle'>
+          <ul className='nav-menu-items'>
+            <li className='navbar-toggle' onClick={showSidebar}>
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />
               </Link>
@@ -29,9 +31,9 @@ function Navbar() {
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
-                  <Link to={item.path}>
+                  <Link class="btn">
                     {item.icon}
-                    <span>{item.title}</span>
+                    <span onClick={item.command}>{item.title}</span>
                   </Link>
                 </li>
               );
