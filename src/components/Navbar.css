@@ -1,9 +1,11 @@
 .navbar {
-    background-color: #060b26;
+    background-color: rgba(0,0,0,0);
+    position: fixed;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
+    z-index: 2;
   }
   
   .menu-bars {
@@ -22,6 +24,7 @@
     top: 0;
     left: -100%;
     transition: 850ms;
+    z-index: 3;
   }
   
   .nav-menu.active {
@@ -32,7 +35,7 @@
   .nav-text {
     display: flex;
     justify-content: start;
-    align-items: center;
+    /* align-items: center; */
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
@@ -69,8 +72,4 @@
   
   span {
     margin-left: 16px;
-  }
-
-  .btn {
-    
   }
