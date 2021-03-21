@@ -1,5 +1,5 @@
 .home__hero-section {
-  color: #fff;
+  color: var(--backLight);
   padding: 160px 0;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .top-line {
-  color: #f00946;
+  color: var(--accentActive);
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -48,15 +48,15 @@
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: #f7f8fa;
+  color: var(--headerColorLight);
 }
 
 .dark {
-  color: #1c2237;
+  color: var(--headerColorDark);
 }
 
 .darkBg {
-  background-color: #1c2237;
+  background-color: var(--backDark);
 }
 
 .home__hero-subtitle {

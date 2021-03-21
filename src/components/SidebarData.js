@@ -1,66 +1,79 @@
 import React from 'react';
 import $ from 'jquery';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import { homeObjects } from '../pages/HomePage/Data';
 // import Home from '../pages/HomePage/Home';
 
+function getStyleSheet(unique_title){
+  for(var i=0; i<document.styleSheets.length; i++) {
+    var sheet = document.styleSheets[i];
+    if(sheet.title == unique_title) {
+      return sheet;
+    }
+  }
+}
+
+// var ss = getStyleSheet("App.js");
+let root = document.documentElement;
 
 export var SidebarData = [
   {
-    title: 'Change Button Color',
-    path: '/',
-    icon: <AiIcons.AiFillHome />,
+    title: 'Change Header 1 Color',
+    icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
     command: () => {
       console.log("title");
-      
+      root.style.setProperty('--headerColorLight', '#A27E8E');
     }
   },
   {
-    title: 'Add Title',
-    path: '/reports',
+    title: 'Change Header 2 Color',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
     command: () => {
-      console.log("button");
+      console.log("title");
+      root.style.setProperty('--headerColorDark', '#88292F');
     }
   },
   {
-    title: 'Turn Red',
-    path: '/reports',
+    title: 'Change Button Color',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
     command: () => {
-      console.log("Red");
-      $("h1").css({color: "red"});
+      console.log("title");
+      root.style.setProperty('--accent', 'green');
     }
   },
   {
-    title: 'Turn Black',
-    path: '/reports',
+    title: 'Change Primary Background',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
     command: () => {
-      $("h1").css({color: "black"});
+      console.log("title");
+      root.style.setProperty('--backDark', '#2E1E0F');
     }
   },
   {
-    title: 'Turn Green',
-    path: '/reports',
+    title: 'Add Card',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
     command: () => {
-      $("h1").css({color: "green"});
-    }
-  },
-  {
-    title: 'Turn Yellow',
-    path: '/reports',
-    icon: <IoIcons.IoIosPaper />,
-    cName: 'nav-text',
-    command: () => {
-      $("h1").css({color: "yellow"});
+      homeObjects.push(
+        {
+          lightBg: false,
+          lightText: true,
+          lightTextDesc: true,
+          topLine: 'Exclusive Access',
+          headline: 'Header1',
+          description:
+            'description1',
+          buttonLabel: 'Get Started',
+          buttonColor: 'blue',
+          imgStart: '',
+          img: 'logo512.png',
+          alt: 'image'
+        }
+      )
     }
   }
 ];

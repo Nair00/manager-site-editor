@@ -1,15 +1,15 @@
-var color = 'blue'
-export var homeObjects = [
+var defaultColor = 'blue';
+var homeObjects = [
   {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Exclusive Access',
-    headline: 'Header1',
+    topLine: 'VIEW OUR PRODUCTS',
+    headline: 'Shop through our catalog of products',
     description:
-      'description1',
-    buttonLabel: 'Get Started',
-    buttonColor: color,
+      'We provide worldwide shipping to all countries. If there are any issues, just issue a refund and we will process your request',
+    buttonLabel: 'Shop Now',
+    buttonColor: defaultColor,
     imgStart: '',
     img: 'logo512.png',
     alt: 'image'
@@ -18,97 +18,16 @@ export var homeObjects = [
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Exclusive Access',
-    headline: 'Header3',
+    topLine: '100% SECURE',
+    headline: 'Stay protected 24/7 anywhere anytime',
     description:
-      'description3',
-    buttonLabel: 'Get Started',
-    buttonColor: color,
+      'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
+    buttonLabel: 'Learn More',
+    buttonColor: defaultColor,
     imgStart: 'start',
-    img: 'logo512.png',
-    alt: 'image'
-  },
-  {
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Exclusive Access',
-    headline: 'Header2',
-    description:
-      'description2',
-    buttonLabel: 'Get Started',
-    buttonColor: color,
-    imgStart: '',
-    img: 'logo512.png',
-    alt: 'image'
-  },
-  {
-    lightBg: true,
-    lightText: false,
-    lightTextDesc: false,
-    topLine: 'Free for everyone',
-    headline: 'Header4',
-    description:
-      'description4',
-    buttonLabel: 'Get Started',
-    buttonColor: color,
-    imgStart: 'start',
-    img: 'logo512.png',
+    img: 'business-10-512.png',
     alt: 'image'
   }
 ];
-// export const homeObjOne = {
-//     lightBg: false,
-//     lightText: true,
-//     lightTextDesc: true,
-//     topLine: 'Exclusive Access',
-//     headline: 'Header1',
-//     description:
-//       'description1',
-//     buttonLabel: 'Get Started',
-//     imgStart: '',
-//     img: 'logo512.png',
-//     alt: 'image'
-//   };
-  
-//   export const homeObjTwo = {
-//     lightBg: false,
-//     lightText: true,
-//     lightTextDesc: true,
-//     topLine: 'Exclusive Access',
-//     headline: 'Header2',
-//     description:
-//       'description2',
-//     buttonLabel: 'Get Started',
-//     imgStart: '',
-//     img: 'logo512.png',
-//     alt: 'image'
-//   };
-  
-//   export const homeObjThree = {
-//     lightBg: true,
-//     lightText: false,
-//     lightTextDesc: false,
-//     topLine: 'Exclusive Access',
-//     headline: 'Header3',
-//     description:
-//       'description3',
-//     buttonLabel: 'Get Started',
-//     imgStart: 'start',
-//     img: 'logo512.png',
-//     alt: 'image'
-//   };
-  
-//   export const homeObjFour = {
-//     lightBg: false,
-//     lightText: true,
-//     lightTextDesc: true,
-//     topLine: 'Exclusive Access',
-//     headline: 'Header4',
-//     description:
-//       'description4',
-//     buttonLabel: 'Get Started',
-//     imgStart: 'start',
-//     img: 'logo512.png',
-//     alt: 'image'
-//   };
+
+export var homeObjects;

@@ -26,32 +26,32 @@ function Menubar() {
     window.addEventListener('resize', showButton);
     return (
       window.removeEventListener('resize', showButton)
-    )
+    );
   }, []);
 
 
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className='navbar'>
-          <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <MdAccountCircle className='navbar-icon' />
+        <nav className='navbar2'>
+          <div className='navbar2-container container'>
+            <Link to='/' className='navbar2-logo' onClick={closeMobileMenu}>
+              <MdAccountCircle className='navbar2-icon' />
               DumbPros
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <ul className={click ? 'nav2-menu active' : 'nav2-menu'}>
+              <li className='nav2-item'>
+                <Link to='/' className='nav2-links' onClick={closeMobileMenu}>
                   Home
                 </Link>
               </li>
-              <li className='nav-item'>
+              <li className='nav2-item'>
                 <Link
-                  to='/services'
-                  className='nav-links'
+                  to='/database'
+                  className='nav2-links'
                   onClick={closeMobileMenu}
                 >
                   Database

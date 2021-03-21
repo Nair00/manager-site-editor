@@ -63,7 +63,7 @@
   
   .btn--wide:hover {
     color: #fff;
-    background-color: #f00946;
+    background-color: var(--accentActive);
     transition: all 0.2s ease-out;
   }
   
@@ -78,13 +78,13 @@
   }
   
   .blue {
-    background-color: #276afb;
+    background-color: var(--accent);
     color: #fff;
     border: none;
   }
   
   .red {
-    background-color: #f00946;
+    background-color: var(--accentActive);
     color: #fff;
     border: none;
   }

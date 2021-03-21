@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <title>Table</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="content">
+        <h1>Data Table</h1>
+
+        <table class="tb" style="background-color: #1c2237">
+            <tr style="color: #f7f8fa" style="text-align: center">
+                    <th>FName</th>
+                    <th>SName</th>
+                    <th>Age</th>
+                    <th></th>
+                    <th>Job</th>
+                    <th></th>
+                    <th>Add Data</th>
+
+            </tr>
+            {% for task in tasks %}
+                <tr style="color: #f7f8fa" style="text-align: center">
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.content_2 }}</td>
+                    <td>{{ task.content_3 }}<td>
+                    <td>{{ task.content_4 }}<td></td>
+                    <td>{{ task.date_created.date() }}</td>
+                    <td>
+                        <a style="color: #fff" href="/delete/{{ task.id }}" class="btn btn-primary btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <form action="/" method="POST">
+            <textarea name="content" cols="30" rows="5" id="content" ></textarea>
+
+            <input style="background-color:#276afb" class="btn btn-primary btn-default" type="submit" value="Add People">
+        </form>
+
+        <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label>Select file</label>
+                <div class="custom-file">
+                    <input type="file" class="btn custom-file-input btn-primary btn-default" name="file.txt" id="file.txt">
+                    <labe class="custom-file-label" for="image">Select file...</labe>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-default">Upload file</button>
+        </form>
+
+        <form action="ADD" method="POST">
+            <button type="submit" class="btn btn-primary btn-default">ADD data</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

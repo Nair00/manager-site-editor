@@ -1,0 +1,6 @@
+Vadim 3 angajat
+Tudor 5 somer
+Mihai 10 IT
+MIhaita 20 sofer
+Piticu 67 management
+Gigi 23 elev

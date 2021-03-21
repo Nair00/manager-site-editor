@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+  --backDark: #1c2237;
+  --backLight: #f7f8fa;
+  --accent: #276afb;
+  --accentActive: #f00946;
+  --headerColorLight: #f7f8fa;
+  --headerColorDark: #1c2237;
+}
 
 * {
   box-sizing: border-box;
